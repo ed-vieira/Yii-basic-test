@@ -223,6 +223,7 @@ class ProductsController extends Controller
      *     tags={"produtos"},
      *     summary="Alterar Produto.",
      *     consumes={"application/json"},
+     *     security={{"Bearer":{}}},
      *     @SWG\Parameter(
      *        name="id",
      *        in="path",
