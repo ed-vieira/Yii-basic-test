@@ -2,15 +2,11 @@
 
 namespace app\controllers;
 
-use app\models\Customer;
 use app\controllers\RestController as Controller;
-use app\models\CustomerAddress;
-use yii\data\ActiveDataProvider;
 use Exception;
 use app\utils\strings\Handler as StrHandler;
 use app\services\customers\Service;
 use Yii;
-use yii\helpers\Url;
 
 class CustomersController extends Controller
 {
@@ -39,9 +35,7 @@ class CustomersController extends Controller
      *     @SWG\Response(
      *         response = 200,
      *         description = "response",
-     *         @SWG\Schema(
-     *           @SWG\Property(property="message", type="string")
-     *         )
+     *         @SWG\Schema(@SWG\Property(property="message", type="string"))
      *     )
      * )
     */
@@ -90,7 +84,7 @@ class CustomersController extends Controller
      *     @SWG\Response(
      *         response = 200,
      *         description = "Cliente response",
-     *         @SWG\Schema(ref="#/definitions/Customer")
+     *         @SWG\Schema(type="array", @SWG\Items(ref="#/definitions/Customer"))
      *     ),
      * )
     */
@@ -120,11 +114,7 @@ class CustomersController extends Controller
      *       @SWG\Items(type="integer"), 
      *       format="int32"
      *     ),
-     *     @SWG\Response(
-     *         response = 200,
-     *         description = "Cliente response",
-     *         @SWG\Schema(ref="#/definitions/Customer")
-     *     ),
+     *     @SWG\Response(response = 200, description = "Cliente response", @SWG\Schema(ref="#/definitions/Customer")),
      * )
     */
     public function actionShow() {   
@@ -224,11 +214,7 @@ class CustomersController extends Controller
      *        type="string",
      *        maxLength=200,
      *     ),
-     *     @SWG\Response(
-     *         response = 200,
-     *         description = "response",
-     *         @SWG\Schema(ref="#/definitions/Customer")
-     *     ),
+     *     @SWG\Response(response = 200, description = "response", @SWG\Schema(ref="#/definitions/Customer")),
      *   ),
      *   @SWG\Put(
      *      tags={"clientes"},
@@ -254,11 +240,7 @@ class CustomersController extends Controller
      *           @SWG\Property(property="complemento", type="string"),
      *        )
      *     ),
-     *     @SWG\Response(
-     *         response = 200,
-     *         description = "response",
-     *         @SWG\Schema(ref="#/definitions/Customer")
-     *     ),
+     *     @SWG\Response(response = 200, description = "response", @SWG\Schema(ref="#/definitions/Customer")),
      *   )
      * )
      * 
@@ -398,11 +380,7 @@ class CustomersController extends Controller
      *        type="string",
      *        maxLength=200,
      *     ),
-     *     @SWG\Response(
-     *         response = 200,
-     *         description = "response",
-     *         @SWG\Schema(ref="#/definitions/Customer")
-     *     ),
+     *     @SWG\Response(response = 200, description = "response", @SWG\Schema(ref="#/definitions/Customer")),
      *   ),
      *    @SWG\Put(
      *     tags={"clientes"},
@@ -444,13 +422,8 @@ class CustomersController extends Controller
      *           @SWG\Property(property="complemento", type="string"),
      *        )
      *      ),
-     *     @SWG\Response(
-     *         response = 200,
-     *         description = "response",
-     *         @SWG\Schema(ref="#/definitions/Customer")
-     *     ),
+     *      @SWG\Response(response = 200, description = "response", @SWG\Schema(ref="#/definitions/Customer")),
      *   ),
-     * 
      * )
     */
     public function actionUpdate() {

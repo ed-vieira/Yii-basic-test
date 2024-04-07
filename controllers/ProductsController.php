@@ -75,9 +75,9 @@ class ProductsController extends Controller
      *        type="string",
      *     ),
      *     @SWG\Response(
-     *         response= 200,
-     *         description= "Produtos collection response",
-     *         @SWG\Schema(type="array", @SWG\Items(ref = "#/definitions/Product"))
+     *          response= 200, 
+     *          description= "Produtos collection response", 
+     *          @SWG\Schema(type="array", @SWG\Items(ref="#/definitions/Product"))
      *     ),
      * )
     */
@@ -110,8 +110,8 @@ class ProductsController extends Controller
      *       format="int32"
      *     ),
      *     @SWG\Response(
-     *         response = 200,
-     *         description = "Produtos collection response",
+     *         response = 200, 
+     *         description = "Produtos collection response", 
      *         @SWG\Schema(ref="#/definitions/Product")
      *     ),
      * )
@@ -182,8 +182,8 @@ class ProductsController extends Controller
      *        )
      *      ),
      *      @SWG\Response(
-     *         response = 200,
-     *         description = "response",
+     *         response = 200, 
+     *         description = "response", 
      *         @SWG\Schema(ref="#/definitions/Product")
      *      ),
      *   )
@@ -270,15 +270,15 @@ class ProductsController extends Controller
      *     tags={"produtos"},
      *     summary="Alterar Produto.",
      *     consumes={"application/json"},
-     *     @SWG\Parameter(
-     *       name="id",
-     *       in="path",
-     *       description="identifier",
-     *       required=true,
-     *       type="integer", 
-     *       @SWG\Items(type="integer"), 
-     *       format="int32"
-     *     ),
+     *      @SWG\Parameter(
+     *        name="id",
+     *        in="path",
+     *        description="identifier",
+     *        required=true,
+     *        type="integer", 
+     *        @SWG\Items(type="integer"), 
+     *        format="int32"
+     *      ),
      *      security={{"Bearer":{}}},
      *      @SWG\Parameter(
      *        description="Body", 
@@ -291,11 +291,11 @@ class ProductsController extends Controller
      *           @SWG\Property(property="price", type="integer")
      *        )
      *      ),
-     *     @SWG\Response(
+     *      @SWG\Response(
      *         response = 200,
      *         description = "response",
      *         @SWG\Schema(ref="#/definitions/Product")
-     *     ),
+     *      ),
      *    ),
      * )
     */

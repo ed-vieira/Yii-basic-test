@@ -16,17 +16,12 @@ use app\models\ContactForm;
  *     basePath="/api/v1/",
  *     produces={"application/json"},
  *     @SWG\Info(version="1.0", title="Simple API"),
- *     @SWG\SecurityScheme(
- *      securityDefinition="Bearer",
- *      type="apiKey",
- *      name="Authorization",
- *      in="header",
- *     ),
+ *     @SWG\SecurityScheme(securityDefinition="Bearer", type="apiKey", name="Authorization", in="header"),
  * )
- * @SWG\Tag(name="auth", description="")
- * @SWG\Tag(name="clientes", description="")
- * @SWG\Tag(name="produtos", description="")
- * @SWG\Tag(name="cliente-produtos", description="")
+ * @SWG\Tag(name="auth", description="Autenticação")
+ * @SWG\Tag(name="clientes", description="Listar, Criar, Alterar e Remover Clientes")
+ * @SWG\Tag(name="produtos", description="Listar, Criar, Alterar e Remover Produtos")
+ * @SWG\Tag(name="cliente-produtos", description="Listar, Criar, Alterar e Remover Produtos por Cliente")
  */
 class SiteController extends Controller
 {

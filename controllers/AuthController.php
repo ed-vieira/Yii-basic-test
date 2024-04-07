@@ -2,13 +2,10 @@
 
 namespace app\controllers;
 
-use app\models\forms\UploadForm;
 use app\models\User;
 use app\controllers\ApiController as Controller;
 use Exception;
 use Yii;
-use yii\web\UploadedFile;
-use yii\data\ActiveDataProvider;
 use yii\web\UnauthorizedHttpException;
 /**
  */
@@ -21,7 +18,7 @@ class AuthController extends Controller
      *     summary="Gerar Token.",
      *     produces={"application/json"},
      *      @SWG\Parameter(
-     *        description="Username", 
+     *        description="Gerar Token", 
      *        in="body",
      *        name="body",
      *        required=true,
@@ -41,9 +38,7 @@ class AuthController extends Controller
      *     @SWG\Response(
      *         response = 401,
      *         description = "response",
-     *         @SWG\Schema(
-     *           @SWG\Property(property="message", type="string"),
-     *        )
+     *         @SWG\Schema(@SWG\Property(property="message", type="string"))
      *     ),
      * )
     */
@@ -96,9 +91,7 @@ class AuthController extends Controller
      *     @SWG\Response(
      *         response = 401,
      *         description = "response",
-     *         @SWG\Schema(
-     *           @SWG\Property(property="message", type="string"),
-     *        )
+     *         @SWG\Schema(@SWG\Property(property="message", type="string"))
      *     ),
      * )
     */

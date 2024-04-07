@@ -5,8 +5,6 @@ namespace app\controllers;
 use Yii;
 use app\models\User;
 use app\controllers\RestController as Controller;
-use yii\web\UploadedFile;
-use yii\data\ActiveDataProvider;
 /**
  */
 class ProfileController extends Controller
@@ -45,9 +43,7 @@ class ProfileController extends Controller
      *     @SWG\Response(
      *         response = 200,
      *         description = "response",
-     *         @SWG\Schema(
-     *           @SWG\Property(property="message", type="string"),
-     *        )
+     *         @SWG\Schema(@SWG\Property(property="message", type="string"))
      *     )
      * )
     */

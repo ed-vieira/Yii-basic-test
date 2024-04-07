@@ -2,14 +2,10 @@
 
 namespace app\controllers;
 
-use app\models\forms\UploadForm;
 use app\controllers\RestController as Controller;
-use app\models\Product;
 use Yii;
-use yii\web\UploadedFile;
 use app\services\products\Service;
 use Exception;
-use yii\data\ActiveDataProvider;
 /**
  */
 class CustomerProductsController extends Controller
@@ -49,7 +45,9 @@ class CustomerProductsController extends Controller
      *     @SWG\Response(
      *         response = 200,
      *         description = "response",
-     *         @SWG\Schema(ref="#/definitions/Product")
+     *         @SWG\Schema(
+     *             @SWG\Property(property="message", type="string")
+     *         )
      *     )
      * )
     */
@@ -85,7 +83,7 @@ class CustomerProductsController extends Controller
      *      @SWG\Response(
      *         response = 200,
      *         description = "Produtos collection response",
-     *         @SWG\Schema(ref = "#/definitions/Product")
+     *         @SWG\Schema(type="array", @SWG\Items(ref="#/definitions/Product"))
      *      ),
      * )
     */
