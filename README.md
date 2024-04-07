@@ -19,8 +19,10 @@ A aplicação foi criada utilizando Docker fazendo uso da imagem oficial recomen
 https://github.com/yiisoft/yii2-docker 
 
 
-Na pasta root do projeto executar o comando: 
-docker compose up -d  (Docker Desktop)
+Na pasta root do projeto executar o comando (Docker Desktop): 
+```
+docker compose up -d  
+```
 
 Este comando fará o "build" da imagem com suas dependências
 
@@ -34,30 +36,50 @@ https://swagger.io/specification/v2/
 Para a execução do projeto:
 
 Instalar as dependências
+
+```
 docker compose run --rm php composer install
+```
 
-Definir as permissões
+Definir as permissões de arquivos para a aplicação processar as requisições e gerar os logs:
+
+```
 docker compose run --rm php chown www-data:www-data -R  /app/runtime
+```
 
+```
 docker compose run --rm php chown www-data:www-data -R  /app/web
-
+```
 Executando migrations
+
+```
 docker compose run --rm php yii migrate
+```
 
 Criar usuário em modo desenvolvimento/produção 
+
+```
 docker compose run --rm php yii create-user --name=Administrador  --username=admin --password=admin 
+```
 
 http://localhost:8000/site/docs
 
 Executando migrations para executar testes
+```
 docker compose run --rm  php  tests/bin/yii migrate
+```
 
 Criar usuário em modo teste
+
+```
 docker compose run --rm  php tests/bin/yii  create-user --name=Administrador  --username=admin --password=admin 
+```
 * Os testes foram escritos utilizando este usuário
 
 Executando testes
-docker compose run --rm  php  vendor/bin/codecept run
 
+```
+docker compose run --rm  php  vendor/bin/codecept run
+```
 
 
