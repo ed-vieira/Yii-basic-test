@@ -28,9 +28,9 @@ class UploadForm extends Model
     }
 
 
-    public function uploadProductPhoto(int $customerId, int $productId) {
+    public function uploadProductPhoto(int $customerId, int $productId): string {
         try {
-            $this->uploadFile("customer/{$customerId}/products/{$productId}");
+            return $this->uploadFile("customer/{$customerId}/products/{$productId}");
         } catch (Exception $e) {
             throw $e;  
         }
