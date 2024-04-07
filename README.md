@@ -9,8 +9,8 @@
 <br>
 <br>
 
-Projeto
-https://yii-test.edvieira.com.br/site/docs
+#### Projeto
+> https://yii-test.edvieira.com.br/site/docs
 
 
 Execução do projeto em localhost:
@@ -19,7 +19,7 @@ A aplicação foi criada utilizando Docker fazendo uso da imagem oficial recomen
 https://github.com/yiisoft/yii2-docker 
 
 
-Na pasta root do projeto executar o comando (Docker Desktop): 
+Na pasta root do projeto executar os comandos docker **(Docker Desktop)**: 
 ```
 docker compose up -d  
 ```
@@ -62,7 +62,21 @@ Criar usuário em modo desenvolvimento/produção
 docker compose run --rm php yii create-user --name=Administrador  --username=admin --password=admin 
 ```
 
-http://localhost:8000/site/docs
+#### Swagger:
+> http://localhost:8000/site/docs
+
+#### Autenticação: 
+> http://localhost:8000/api/v1/auth/token
+
+#### Clientes:
+> http://localhost:8000/api/v1/customers
+
+#### Produtos: 
+> http://localhost:8000/api/v1/products
+
+#### Produtos por cliente: 
+> http://localhost:8000/api/v1/customer/{customerId}/products
+
 
 Executando migrations para executar testes
 ```
