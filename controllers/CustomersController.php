@@ -434,7 +434,14 @@ class CustomersController extends Controller
      *        required=true,
      *        @SWG\Schema(
      *           @SWG\Property(property="name", type="string"),
-     *           @SWG\Property(property="cpf", type="string")
+     *           @SWG\Property(property="cpf", type="string"),
+     *           @SWG\Property(property="sex", type="string"),
+     *           @SWG\Property(property="cep", type="string"),
+     *           @SWG\Property(property="uf", type="string"),
+     *           @SWG\Property(property="cidade", type="string"),
+     *           @SWG\Property(property="rua", type="string"),
+     *           @SWG\Property(property="numero", type="string"),
+     *           @SWG\Property(property="complemento", type="string"),
      *        )
      *      ),
      *     @SWG\Response(
