@@ -17,6 +17,8 @@ https://swagger.io/specification/v2/
 http://localhost:8000/site/docs
 
 
+https://yii-test.edvieira.com.br/site/docs
+
 Executando migrations
 docker compose run --rm  php   yii migrate
 
